@@ -1,103 +1,91 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="description" content="Contact The Little Taco Shop" />
 
     <title>Contact Us - LTS</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body>
-    <header>
-      <h1>Contact Us</h1>
+<body>
+    <header class="header">
+        <h1 class="header__h1">Contact Us</h1>
 
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/#about">About LTS</a></li>
-          <li><a href="/#menu">Our Menu</a></li>
-          <li><a href="/hours.html">Store Hours</a></li>
-        </ul>
-
-        <figure>
-          <img src="assets/food.png" alt="food" title="Emoji" width="400" />
-          <figcaption>Food</figcaption>
-        </figure>
-      </nav>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#menu">Menu</a></li>
+                <li><a href="/hours.html">Hours</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <section>
+        <figure>
+            <img src="assets/food.png" alt="food" title="Emoji" width="400" />
+            <figcaption class="offscreen">Food</figcaption>
+        </figure>
+    </section>
+
     <main>
-      <section>
-        <h2>Our Contact Form</h2>
-        <form action="https://httpbin.org/post" method="post">
-          <fieldset>
-            <legend>Send Us a Message</legend>
 
-            <p>
-              <label for="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="your name"
-                autocomplete="on"
-                autofocus
-                required
-              />
-            </p>
+        <article>
+            <h2>Our Location</h2>
 
-            <p>
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="your email"
-                autocomplete="on"
-                required
-              />
-            </p>
+            <address>
+                <p>
+                    20 W 34th St. <br />
+                    New York, NY 10001 <br />
+                    USA<br />
+                    <br />
+                    Phone: <a href="tel:1234567890">1234567890</a>
+                </p>
+            </address>
+        </article>
 
-            <p>
-              <label for="message">Your Message</label>
-              <br />
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="your message here"
-              ></textarea>
-            </p>
-          </fieldset>
+        <section>
+            <h2>Our Contact Form</h2>
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>Send Us a Message</legend>
 
-          <button type="submit" formmethod="post">Send</button>
-          <button type="reset">Reset</button>
-        </form>
-      </section>
+                    <p>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="your name" autocomplete="on" autofocus
+                            required />
+                    </p>
 
-      <article>
-        <h2>Our Location</h2>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="your email" autocomplete="on"
+                            required />
+                    </p>
 
-        <address>
-          <p>
-            20 W 34th St. <br />
-            New York, NY 10001 <br />
-            USA<br />
-            <br />
-            Phone: <a href="tel:1234567890">1234567890</a>
-          </p>
-        </address>
-      </article>
+                    <p>
+                        <label for="message">Your Message</label>
+                        <br />
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            placeholder="your message here"></textarea>
+                    </p>
+                </fieldset>
 
-      <p><a href="/contact.html">Back to Top</a></p>
+                <button type="submit" formmethod="post">Send</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+
+        <p><a href="/contact.html">Back to Top</a></p>
     </main>
 
     <hr />
 
     <footer>
-      <p>Copyright &copy; The Little Taco Shop</p>
+        <p>Copyright &copy; The Little Taco Shop</p>
     </footer>
-  </body>
+</body>
+
 </html>

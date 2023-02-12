@@ -5,28 +5,31 @@
     <meta charset="UTF-8">
     <meta name="description" content="Working hours of The Little Taco Shop">
     <title>Timings</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-        <h1>Little Taco Shop Hours</h1>
-        <nav>
-            <ul>
+    <header class="header">
+        <h1 class="header__h1">Little Taco Shop Hours</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
                 <li><a href="/">Home</a></li>
-                <li><a href="/#about">About LTS</a></li>
-                <li><a href="/#menu">Our Menu</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="/#menu">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/#about">About</a></li>
             </ul>
-            <figure>
-              <img src="assets/taco.webp" alt="taco" title="Mr Taco" width="260" height="280">
-              <figcaption>Taco</figcaption>
-            </figure>
         </nav>
     </header>
-    <hr>
-    <main>
-      <article>
-        <h2>Timings</h2>
+
+    <section>
+      <figure>
+        <img src="assets/taco.webp" alt="taco" title="Mr Taco" width="260" height="280">
+        <figcaption class="offscreen">Taco</figcaption>
+      </figure>
+    </section>
+    
+    <main class="main">
+      <article class="main__article">
+        <h2 class="main__h2">Hours</h2>
         <p>We are open 7 days a week!</p>
 
         <dl>
@@ -37,15 +40,15 @@
           <dd>11am-11pm</dd>
         </dl>
       </article>
-
-      <br>
       
-      <a href="/hours.html">Back to Top</a>
+      <p class="center">
+        <a href="#">Back to Top</a>
+      </p>
     </main>
     
     <hr>
 
-    <footer>
+    <footer class="footer center">
       <p>Copyright &copy; The Little Taco Shop</p>
     </footer>
   </body>

@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap");
+
+/* || RESET */
+
+/* ******************************* LEARNINGS ******************************* */
+/* * represents true elements (not pseudo elements).
+    true elements are the ones which are part of DOM.
+    Second, the box-sizing property cannot be inherited
+    so even if the pseudo elements are child of some true
+    element which for sure must have inherited the box-sizing
+    property through the *, wont be able to pass it down to its
+    children */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FF: "Nunito", sans-serif;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLORS */
+    --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+    --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
+}
+
+/* UTILITY CLASSES */
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+}
+
+body {
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    /* padding: 1rem; */
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+h2 {
+    font-family: var(--FF);
+    color: var(--HERO-BGCOLOR);
+    margin-bottom: 1rem;
+}
+
+a:any-link {
+    color: black;
+}
+
+/* || HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header__h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.header__nav {
+    background-color: white;
+    box-shadow: 0 1px 4px 0 black;
+    padding: 0.3rem;
+    font-weight: bold;
+}
+
+.header__ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*  || FOOTER */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    padding: 0.3rem;
+    font-size: --FS;
+    font-family: var(--FF);
+}
+
+/* || MAIN */
+
+.main {
+    padding: 1rem;
+    scroll-margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.main__article {
+    margin-bottom: 1rem;
+}
+
+/* || MENU */
+
+tr,
+tbody,
+thead,
+tfoot {
+    display: contents;
+}
+
+.menu__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "hd1 hd2 hd3"
+        "cr cr1 cr1p"
+        "cr cr2 cr2p"
+        "cr cr3 cr3p"
+        "sf sf1 sf1p"
+        "sf sf2 sf2p"
+        "sf sf3 sf3p"
+        "cs cs cs"
+    ;
+
+    gap: 0.1rem;
+}
+
+.menu__cr {
+    grid-area: cr;
+}
+
+.menu__sf {
+    grid-area: sf;
+}
+
+.menu__cs {
+    grid-area: cs;
+}
+
+/* ******************************* LEARNINGS ******************************* */
+/* .menu__item:last-child {
+    color:red;
+} */
+
+
+.menu__header,
+.menu__cr,
+.menu__sf,
+.menu__cs {
+    display: grid;
+    place-content: center;
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+}
+
+th,
+.menu__header,
+.menu__item,
+.menu__cs {
+    border: 2px solid black;
+    padding: 0.5rem;
+}
+
+.menu__item {
+    display: grid;
+    place-content: center;
+}
+
+.menu__header:first-child {
+    border-top-left-radius: 16px;
+}
+
+.menu__header:last-child {
+    border-top-right-radius: 16px;
+}
+
+.menu__cs {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
