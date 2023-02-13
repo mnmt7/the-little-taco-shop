@@ -1,113 +1,98 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="Website of The Little Taco Shop">
     <title>Little Taco Shop</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="assets/food.png" type="image/x-icon">
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="header">
-      <h1 class="header__h1">Little Taco Shop</h1>
-      <nav class="header__nav">
-        <ul class="header__ul">
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="hours.html">Hours</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
+        <h1 class="header__h1">Little Taco Shop</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="hours.html">Hours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
 
     </header>
-    
-    <section>
-      <figure>
-        <img src="assets/taco.webp" alt="taco" title="Tacolicious" width="260" height="280">
-        <figcaption class="offscreen">Mr Taco</figcaption>
-      </figure>
+
+    <section class="hero">
+        <h2 class="hero__h2">Welcome!</h2>
+        <figure class="hero__img    ">
+            <img src="assets/taco.webp" alt="taco" title="Tacolicious" width="260" height="280">
+            <figcaption class="offscreen">Mr Taco</figcaption>
+        </figure>
     </section>
 
     <hr>
 
     <main class="main">
-      <!-- <article id="about">
-        <h2>About <abbr title="Little Tacos Shop">LTS</abbr></h2>
-        <p>
-          <abbr title="Little Tacos Shop">LTS</abbr> was founded in <time datetime="2023">2023</time>. Our
-          shop was built from <strong>a love of tacos</strong>. We hope our shop adds a unique
-          and interesting place to our little town.
+        <article id="menu" class="main__article menu">
+            <h2 class="menu__h2">Our Menu</h2>
+            <table class="menu__container">
+                <caption class="offscreen">Our Tacos</caption>
+                <thead>
+                    <tr>
+                        <th class="menu__header" scope="col">Tacos</th>
+                        <th class="menu__header" scope="col">Quantity</th>
+                        <th class="menu__header" scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="menu__cr menu__item" scope="row" rowspan="3">Crunchy</th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$1.50</td>
+                    </tr>
+
+                    <tr>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$2.50</td>
+                    </tr>
+
+                    <tr>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$3.25</td>
+                    </tr>
+
+                    <tr>
+                        <th class="menu__sf menu__item" scope="row" rowspan="3">Soft</th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$2.00</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$3.50</td>
+                    </tr>
+                    <tr>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$4.50</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="menu__cs menu__item" colspan="3">Chips &amp; Salsa $2</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+        <p class="center">
+            <a href="#">Back to Top</a>
         </p>
 
-        <aside>
-          <h3>Taco Trivia</h3>
-          <details>
-            <summary>When did tacos first appear in the United States?</summary>
-            <p>I dont know myself! But <cite><a href="https://www.google.com">Google</a></cite> knows it</p>
-          </details>
-        </aside>
-      </article>
-
-      <hr>   -->
-
-      <article id="menu" class="main__article menu">
-        <h2 class="menu__h2">Our Menu</h2>
-        <table class="menu__container">
-          <caption class="offscreen">Our Tacos</caption>
-            <thead>
-              <tr>
-                <th class="menu__header" scope="col">Tacos</th>
-                <th class="menu__header" scope="col">Qty</th>
-                <th class="menu__header" scope="col">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th class="menu__cr" scope="row" rowspan="3">Crunchy</th>
-                <td class="menu__item">1</td>
-                <td class="menu__item">$1.50</td>
-              </tr>
-
-              <tr>
-                <td class="menu__item">2</td>
-                <td class="menu__item">$2.50</td>
-              </tr>
-
-              <tr>
-                <td class="menu__item">3</td>
-                <td class="menu__item">$3.25</td>
-              </tr>
-
-              <tr>
-                <th class="menu__sf" scope="row" rowspan="3">Soft</th>
-                <td class="menu__item">1</td>
-                <td class="menu__item">$2.00</td>
-              </tr>
-              <tr>
-                <td class="menu__item">2</td>
-                <td class="menu__item">$3.50</td>
-              </tr>
-              <tr>
-                <td class="menu__item">3</td>
-                <td class="menu__item">$4.50</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td class="menu__cs"  colspan="3">Chips &amp; Salsa $2</td>
-              </tr>
-            </tfoot>
-        </table>
-      </article>
-
-      <p class="center">
-        <a href="#">Back to Top</a>
-      </p>
-
     </main>
-    <footer class="footer center">
-      <p class="center">Copyright &copy; The Little Taco Shop</p>
+    <footer class="footer">
+        <p class="center">Copyright &copy; The Little Taco Shop</p>
     </footer>
-  </body>
+</body>
+
 </html>
